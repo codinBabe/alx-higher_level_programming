@@ -6,8 +6,8 @@ number = random.randint(-10, 10)
 print(number, end=" ")
 
 if number == 0:
-	print("is zero")
+    print("is zero")
 elif number > 0:
-	print("is positive")
+    print("is positive")
 else:
-	print("is negative")
+    print("is negative")
