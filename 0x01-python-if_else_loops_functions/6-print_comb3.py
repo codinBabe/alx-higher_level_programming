@@ -2,7 +2,7 @@
 
 for a in range(10):
     for b in range(a + 1, 10):
-        if b < 9:
-            print("{:02d}".format(a * 10 + b), end=", ")
+        if a == 8 and b == 9:
+            print("89")
         else:
-            print("{:02d}".format(a * 10 + b))
+            print("{}{}, ".format(a, b), end="")
