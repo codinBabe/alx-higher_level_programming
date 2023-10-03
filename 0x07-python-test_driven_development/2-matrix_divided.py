@@ -21,6 +21,6 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    res = [[round(e / div, 2) for e in row] for row in matrix]
+    res = [[round(ele / div, 2) for ele in row] for row in matrix]
     return res
 
