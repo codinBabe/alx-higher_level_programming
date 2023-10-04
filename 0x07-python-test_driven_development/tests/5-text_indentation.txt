@@ -29,6 +29,24 @@ Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
+>>> text_indentation(":")
+:
+<BLANKLINE>
+
+>>> text_indentation(":.")
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> text_indentation(" ")
+
+>>> text_indentation("")
+
+>>> text_indentation(" .")
+.
+<BLANKLINE>
+
 >>> text_indentation(12)
 Traceback (most recent call last):
 ...
