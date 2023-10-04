@@ -17,4 +17,4 @@ TypeError: div must be a number
 
 >>> matrix_divided([[3, 4], [5, 6]], 0)
 Traceback (most recent call last):
-TypeError: division by zero
+ZeroDivisionError: division by zero
