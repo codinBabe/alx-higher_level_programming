@@ -39,7 +39,7 @@ class TestMaxInteger(unittest.TestCase):
     def one_num(self):
         """check for one number"""
         num = [1]
-        self.assertEqual(max_integer(one), 1)
+        self.assertEqual(max_integer(num), 1)
 
 if __name__ == '__main__':
     unittest.main()
