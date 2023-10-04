@@ -6,7 +6,7 @@ My name is John Smith
 My name is Walter White
 
 >>> say_my_name("Bob")
-My name is Bob
+My name is Bob 
 
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
