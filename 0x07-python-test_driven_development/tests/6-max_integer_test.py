@@ -56,7 +56,7 @@ class TestMaxInteger(unittest.TestCase):
         name = "Toyin"
         self.assertEqual(max_integer(name), 'y')
 
-    def one_num(self):
+    def test_one_num(self):
         """check for one number"""
         num = [1]
         self.assertEqual(max_integer(num), 1)
