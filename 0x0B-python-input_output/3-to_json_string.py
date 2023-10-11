@@ -11,4 +11,3 @@ def to_json_string(my_obj):
     :param:my_obj - object to return
     """
     return json.dumps(my_obj)
-
