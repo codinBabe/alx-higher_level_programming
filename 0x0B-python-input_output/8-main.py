@@ -10,9 +10,3 @@ print(m)
 mj = class_to_json(m)
 print(type(mj))
 print(mj)
-
-guillaume@ubuntu:~/0x0B$ ./8-main.py 
-<class '8-my_class.MyClass'>
-[MyClass] John - 89
-<class 'dict'>
-{'name': 'John', 'number': 89}
