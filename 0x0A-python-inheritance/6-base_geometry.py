@@ -5,9 +5,8 @@
 
 
 class BaseGeometry:
-    """an empty class"""
+    """an empty basegeometry class"""
 
-def area(self):
-    """a public instance"""
-    raise Exception("area() is not implemented")
-    
+    def area(self):
+        """a public instance"""
+        raise Exception("area() is not implemented")
