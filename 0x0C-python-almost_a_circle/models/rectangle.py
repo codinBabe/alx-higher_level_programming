@@ -90,3 +90,11 @@ class Rectangle(Base):
         """print string representation of rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """update the class rectangle by adding public method"""
+        attr_names = ["id", "width", "height", "x", "y"]
+
+        for i, arg in enumerate(args):
+            if i < len(attr_names):
+                setattr(self, attr_names[i], arg)
