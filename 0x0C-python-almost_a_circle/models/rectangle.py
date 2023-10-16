@@ -91,10 +91,24 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update the class rectangle by adding public method"""
         attr_names = ["id", "width", "height", "x", "y"]
 
-        for i, arg in enumerate(args):
-            if i < len(attr_names):
-                setattr(self, attr_names[i], arg)
+        if args:
+            for i in range(len(args)):
+                setattr(self, attr_names[i], args[i])
+        else:
+            for j in kwargs:
+                setattr(self, j, kwargs[j])
+
+    def to_dictionary(self):
+        """convert rectangle to dictionary"""
+        rec_dict  = {
+                'id': self.id,
+                'width': self.width,
+                'height':self.height,
+                'x': self.x,
+                'y': self.y
+                }
+        return rec_dict
