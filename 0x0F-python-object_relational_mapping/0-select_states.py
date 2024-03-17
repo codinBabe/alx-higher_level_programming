@@ -9,8 +9,13 @@ if __name__ == "__main__":
     from sys import argv
 
     # Connect database using command-line arguments
-    my_dbase = MySQLdb.connect(host='localhost', user=argv[1], password=argv[2],
-                            db=argv[3], port=3306)
+    my_dbase = MySQLdb.connect(
+            host='localhost',
+            user=argv[1],
+            password=argv[2],
+            db=argv[3],
+            port=3306
+            )
     # Create cursor obj to interact with database
     my_cursor = my_dbase.cursor()
 
