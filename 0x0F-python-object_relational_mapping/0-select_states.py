@@ -1,24 +1,31 @@
 #!/usr/bin/python3
-""" This module connet to a database"""
+"""
+Module that connects a python script to a database
+"""
 
+if __name__ == "__main__":
 
-if __name__ == "__main_":
     import MySQLdb
-    import sys
+    from sys import argv
 
-    db_connection = MySQLdb.connect(
-            host="localhost",
-            port=3306,
-            user=sys.argv[1],
-            password=sys.argv[2],
-            database=sys.argv[3]
-            )
+    # Connect database using command-line arguments
+    my_dbase = MySQLdb.connect(host='localhost', user=argv[1], password=argv[2],
+                            db=argv[3], port=3306)
+    # Create cursor obj to interact with database
+    my_cursor = my_dbase.cursor()
 
-    db_cursor = db_connection.cursor()
-    db_cursor.execute("SELECT * FROM states ORDER BY states.id ASC;")
+    # Execute a SELECT query to fetch data
+    my_cursor.execute("SELECT * FROM states ORDER BY states.id ASC;")
 
-    for row in db_cursor.fetchall():
+    # fetch all the data returned by the query
+    my_data = my_cursor.fetchall()
+
+    # Iterate through the fetched data and print each row
+    for row in my_data:
         print(row)
 
-    db_cursor.close()
-    db_connection.close()
+    # Close all cursors
+    my_cursor.close()
+
+    # Close all databases
+    my_dbase.close()
