@@ -20,11 +20,9 @@ if __name__ == "__main__":
     my_session = sessionmaker(bind=engine)
     session = my_session()
 
-    first_state = session.query(State).order_by(State.id).first()
-
-    if first_state is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(first_state.id, first_state.name))
+    new_state = State(name='Louisiana')
+    session.add(new_state)
+    session.commit()
+    print("{}".format(new_state.id))
 
     session.close()
