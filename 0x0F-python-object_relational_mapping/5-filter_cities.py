@@ -26,11 +26,12 @@ if __name__ == "__main__":
             ON cities.state_id = states.id
             ORDER BY cities.id"""
             )
-    print(", ".join([city[2]
-                    for city in my_cursor.fetchall()
-                    if city[4] == argv[4]])
 
-        )
+    print(", ".join([city[2]
+                     for city in my_cursor.fetchall()
+                     if city[4] == argv[4]])
+
+          )
 
     # Close all cursors
     my_cursor.close()
