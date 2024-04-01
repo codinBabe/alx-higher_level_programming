@@ -20,6 +20,6 @@ if __name__ == "__main__":
             print("No result")
         else:
             print("[{}] {}".format(parsed_res.get(
-                "id"),parsed_res.get("name")))
+                "id"), parsed_res.get("name")))
     except ValueError:
         print("Not a valid JSON")
